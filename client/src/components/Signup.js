@@ -5,7 +5,7 @@ import { AuthContext } from '../AuthContext';
 import './styles/Signup.css';
 
 const Signup = () => {
-  const [name, setName] = useState(''); // Update field to 'name'
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -15,7 +15,6 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      // Send the 'name' instead of 'username'
       await axiosInstance.post('/auth/signup', { name, email, password });
       setIsAuthenticated(true);
       navigate('/home');
@@ -33,7 +32,7 @@ const Signup = () => {
           type="text"
           placeholder="Name"
           value={name}
-          onChange={(e) => setName(e.target.value)} // Update handler to setName
+          onChange={(e) => setName(e.target.value)}
           required
         />
         <input
