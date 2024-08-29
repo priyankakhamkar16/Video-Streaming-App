@@ -51,7 +51,7 @@ const Signup = () => {
         />
         <button type="submit">Sign Up</button>
         <p>
-          Already have an account? <a onClick={() => navigate('/login')}>Login</a>
+          Already have an account? <span className="link" onClick={() => navigate('/login')}>Login</span>
         </p>
       </form>
     </div>
