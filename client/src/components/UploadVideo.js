@@ -1,4 +1,3 @@
-// src/components/UploadVideo.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './styles/UploadVideo.css';
@@ -22,7 +21,7 @@ const UploadVideo = () => {
       // Replace 'your_auth_token' with the actual token
       const token = localStorage.getItem('authToken'); // or however you store the token
 
-      await axios.post('http://localhost:5000/api/videos/upload', formData, {
+      await axios.post('https://video-streaming-app-bpp4.vercel.app/api/videos/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
