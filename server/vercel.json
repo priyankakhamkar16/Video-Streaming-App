@@ -3,14 +3,14 @@
     "name": "video-streaming-backend",
     "builds": [
       {
-        "src": "server.js",
+        "src": "server/server.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/server.js"
+        "src": "/(.*)",
+        "dest": "/server/server.js"
       }
     ]
   }
