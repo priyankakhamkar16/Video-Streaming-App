@@ -1,4 +1,3 @@
-// src/components/ViewVideos.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -7,7 +6,7 @@ const ViewVideos = () => {
 
   const fetchVideos = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/videos/all'); // Update endpoint if necessary
+      const response = await axios.get('https://video-streaming-app-bpp4.vercel.app/api/videos/all');
       setVideos(response.data);
     } catch (error) {
       console.error('Error fetching videos:', error);
@@ -25,7 +24,7 @@ const ViewVideos = () => {
         {videos.map((video) => (
           <div key={video._id}>
             <video width="320" height="240" controls>
-              <source src={`http://localhost:5000/${video.path}`} type="video/mp4" />
+              <source src={`https://video-streaming-app-bpp4.vercel.app/${video.path}`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
