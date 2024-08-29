@@ -1,9 +1,20 @@
 {
     "version": 2,
     "name": "video-streaming-frontend",
-    "buildCommand": "npm run build",
-    "outputDirectory": "build",
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
     "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
       {
         "src": "/(.*)",
         "dest": "/index.html"
