@@ -1,0 +1,27 @@
+/* src/styles/FeatureBox.css */
+
+.feature-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .feature-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .feature-description {
+    color: #666;
+  }
+  

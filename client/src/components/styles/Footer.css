@@ -1,0 +1,45 @@
+/* src/components/Footer.css */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 1rem; /* Reduced padding for a shorter footer */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center align the content horizontally */
+    align-items: center; /* Vertically center align the content */
+    flex-wrap: wrap; /* Allow wrapping if the content overflows */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    width: 100%; /* Ensure full width usage */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem; /* Adjust font size */
+  }
+  
+  .footer a {
+    color: #ff5722;
+    text-decoration: none;
+    margin: 0 0.5rem; /* Add margin to separate links */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer a:not(:last-child)::after {
+    content: '|';
+    margin: 0 0.5rem;
+  }
+  

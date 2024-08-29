@@ -1,0 +1,32 @@
+/* src/styles/ViewVideos.css */
+.view-videos-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .view-videos-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .videos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .video-item p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
