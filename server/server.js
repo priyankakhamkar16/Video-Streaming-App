@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -10,8 +9,12 @@ const path = require('path');
 dotenv.config();
 const app = express();
 
-// Enable CORS
-app.use(cors());
+// Enable CORS and allow only the frontend's URL
+app.use(cors({
+  origin: 'https://video-streaming-app-silk.vercel.app', // Replace with your frontend's deployed URL
+  methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
+  credentials: true, // Allow cookies or other credentials to be sent
+}));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
