@@ -11,7 +11,7 @@ const app = express();
 
 // Enable CORS and allow only the frontend's URL
 app.use(cors({
-  origin: 'https://video-streaming-app-silk.vercel.app/login', // Replace with your frontend's deployed URL
+  origin: 'https://video-streaming-app-silk.vercel.app', // Replace with your frontend's deployed URL
   methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
   credentials: true, // Allow cookies or other credentials to be sent
 }));
